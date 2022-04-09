@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLElevatorsController">
+   <children>
+      <GridPane fx:id="mainGrid">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="155.4" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="320.8" minHeight="4.799984741210949" prefHeight="55.8" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="410.4000152587891" minHeight="10.0" prefHeight="376.2" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="640.0">
+               <children>
+                  <Label text="Elevator System">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="statusButton" mnemonicParsing="false" onAction="#showStatus" text="Status" />
+                        <Button fx:id="stepButton" mnemonicParsing="false" onAction="#makeStep" text="Step">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="31.0" prefWidth="402.0">
+                           <children>
+                              <Button fx:id="pickupButton" mnemonicParsing="false" onAction="#pickup" text="Pickup">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="floorField" prefHeight="26.0" prefWidth="36.0">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="generateButton" mnemonicParsing="false" onAction="#generateElevators" text="Generate elevators">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="generateField" prefHeight="26.0" prefWidth="36.0">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children></VBox>
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
